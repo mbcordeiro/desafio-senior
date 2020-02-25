@@ -1,0 +1,18 @@
+<mat-toolbar class="mat-elevation-z8 toolbar">
+  <mat-toolbar-row>
+    <strong>Senior</strong>
+    <span class="spacer"></span>
+    <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-light" id="dropdownBasic1" ngbDropdownToggle>Alterar Perfil</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem (click)="navigate('requester')">Solicitante</button>
+          <button ngbDropdownItem (click)="navigate('approver')">Aprovador</button>
+          <button ngbDropdownItem (click)="navigate('admin')" >Administrador</button>
+        </div>
+      </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
